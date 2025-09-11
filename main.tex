@@ -1,0 +1,146 @@
+% CONFIGURATIONS
+\documentclass[11pt, a4paper]{russell}
+\geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=0.8cm, footskip=.5cm}
+\fontdir[fonts/]
+\colorlet{russell}{russell-black}
+\setbool{acvSectionColorHighlight}{true}
+\renewcommand{\acvHeaderSocialSep}{\quad\textbar\quad}
+
+% PERSONAL INFORMATION
+\name{Anudi}{Sirimanna}
+\email{anudisiri@gmail.com}
+\linkedin{linkedin.com/in/anudi-sirimanna}
+
+\begin{document}
+\makecvheader
+
+% EDUCATION
+\cvsection{Education}
+\begin{cventries}
+    \cventry
+        {BASc in Biomedical Engineering, Honors, Co-op} % Degree
+        {University of Waterloo} % Institution
+        {} % Location
+        {2020 - 2025} % Date(s)
+        {
+          \begin{cvitems}
+            \item {Colonel Hugh Heasley Engineering Scholarship}
+            \item {President's Scholarship of Distinction}
+            \item {\textbf{Key Courses:} Human Factors, Biomechanics, Neuroscience, Rehab Engineering, User Experience, Medical Imaging}
+          \end{cvitems}
+        }
+\end{cventries}
+
+% WORK EXPERIENCE
+\cvsection{Work Experience}
+\begin{cventries}
+\cventry
+  {Associate QA Engineer} % Role
+  {Veeva Systems} % Company
+  {} % Location
+  {Jun 2025 - Present} % Date(s)
+  {
+    \begin{cvitems}
+        \item {Authored comprehensive test plans, scripts, and bug reports to evaluate product quality and risk}
+        \item {Executed  functional QA testing—including edge cases, negative flows, and compatibility scenarios}
+        \item {Collaborated within Agile squads alongside engineers and PMs, developing deep expertise of the Campaign Manager product}
+    \end{cvitems}
+  }
+\cventry
+  {Systems Engineering Co-op} % Role
+  {Omniscient Neurotechnology} % Company
+  {} % Location
+  {Jan 2024 - Aug 2024} % Date(s)
+  {
+    \begin{cvitems}
+        \item {Managed Quicktome, a brain-mapping SaMD, driving 5 releases, leading standup, and maintaining the design history file}
+        \item {Investigated product nonconformances and complaints, performed root cause analysis, supported \textbf{CAPA} initiatives, and escalated critical issues}
+        \item {Maintained medical software standards (\textbf{IEC 62304, 21CFR, ISO 14971}) through design reviews, risk \& requirement analyses, and SOP updates}
+        \item {Lead the Continuous Improvement Program using dashboards and monthly reviews to streamline a lean QMS}
+        \item {Performed formative/summative evaluations and authored a risk-based critical task file to conform to usability standards (\textbf{IEC 62366})}
+        \item {Developed a whitepaper exploring the viability of rs-fMRI and tractography for treating disorders of consciousness}
+        \item {Collaborated on user \& software requirements and risk management \& usability plans for a new medical software}
+    \end{cvitems}
+  }
+
+\cventry
+  {Opto-Mechanical Engineering Co-op} % Role
+  {Vena Medical} % Company
+  {} % Location
+  {May 2023 - Aug 2023} % Date(s)
+  {
+    \begin{cvitems}
+        \item {Prepared the Vena MicroAngioscope, an endovascular catheter that visualizes blood clots for stroke treatment, for regulatory approval}
+        \item {Authored design control documentation, including\textbf{ uFMEA \& pFMEA} risk analyses to support \textbf{FDA 510(k)} regulatory compliance}
+        \item {Drafted a provisional patent application outlining engineering designs and functional improvements to enable continued product development}
+        \item {Evaluated \textbf{ISO 13485, 8600} standards and collaborated with scientists to prepare optical/mechanical test methods}
+        \item {Designed mechanical drawings and prototypes in \textbf{Solidworks} for use in patents, testing, and development}
+    \end{cvitems}
+  }
+
+\cventry
+  {Product Development Support Specialist} % Role
+  {Intellijoint Surgical} % Company
+  {} % Location
+  {Sept 2022 - Dec 2022} % Date(s)
+  {
+    \begin{cvitems}
+        \item {Developed Intellijoint VIEW, a web-based planning tool to determine surgical targets for hip arthroplasties}
+        \item {Evaluated KPI metrics using agile tools (Jira) to assess product quality and team performance}
+        \item {Developed and executed validation and verification protocols to ensure thorough, traceable testing}
+    \end{cvitems}
+  }
+
+\cventry
+  {Design Support Intern} % Role
+  {Hyivy Health} % Company
+  {} % Location
+  {May 2021 - Aug 2021} % Date(s)
+  {
+    \begin{cvitems}
+        \item {Designed a women's pelvic health device by conducting research, generating concepts, and testing functional systems}
+        \item {Modeled and iterated through 9 mechanical designs of the lubrication system using \textbf{Fusion360}}
+    \end{cvitems}
+  }
+\end{cventries}
+
+% PROJECTS
+\cvsection{Projects}
+\begin{cventries}
+\cvproject
+  {Peritoneye} % Project name
+  {Sept 2024 - May 2025} % Date(s)
+  {
+    \begin{cvitems}
+        \item {Designed a high-fidelity prototype providing early detection of peritonitis by optically monitoring WBC concentrations}
+        \item {Lead usability by organizing stakeholder feedback sessions and validating setup, cleaning, and UI workflows, achieving a 95 on the System Usability Scale}  
+        \item {Synthesized mock effluent using neutrophils and serum and identified 650 nm as an interference-resistant wavelength for WBC optical measurements} 
+        \item {Developed and executed a SOP for establishing a WBC standard curve through neutrophil dilutions, cell counting, and absorbance measurements to evaluate performance}
+        \item {Developed optical sensor circuits for a Hamamatsu 12880MA sensor, including component wiring, \textbf{Arduino} code debugging, and perfboard-based soldered assemblies} 
+        \item {Optimized the drainage workflow by integrating a direct connection between cyclers and waste containers, accounting for system limitations to streamline nurse operations}
+    \end{cvitems}
+  }
+
+\cvproject
+  {3D Ultrasonic Imaging Device} % Project name
+  {Oct 2023 - Dec 2023} % Date(s)
+  {
+    \begin{cvitems}
+        \item {Designed a 3D imaging system capable of hand gesture detection to play a game of "Rock, Paper, Scissors" against AI}
+        \item {Optimized a rotation-pulley system using \textbf{Solidworks} through FEA modeling and rapid prototyping iterations}
+        \item {Characterized hand gestures with 93\% accuracy and generated 3D ultrasound plot using \textbf{Python} and \textbf{Arduino}}
+    \end{cvitems}
+  }
+\end{cventries}
+
+% SKILLS
+\cvsection{Skills}
+\begin{cvskills}
+    \cvskill{Engineering}{Systems Engineering \& Requirements, Medical Device Development, Risk Analysis (FMEA), Design Controls}
+    \cvskill{Quality \& Regulatory}{ISO 13485, IEC 62304, IEC 62366, 21 CFR, FDA 510(k), CAPA, Quality Management Systems}
+    \cvskill{Technical}{SolidWorks, MATLAB, Python, SQL, Arduino, 3D Printing}
+    \cvskill{Product}{Agile Methodologies, Product Lifecycle Management, User Research, Design Verification \& Validation}
+\end{cvskills}
+
+\vspace*{\fill}
+\end{document}
