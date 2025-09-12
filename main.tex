@@ -1,4 +1,20 @@
 % CONFIGURATIONS
+% ----------------------------------------------------------------------------
+% OVERRIDE GUIDANCE (SAFE EDIT AREA)
+% To tweak spacing or styling, prefer adding \renewcommand lines here instead
+% of editing russell.cls directly. Key adjustable macros (see russell.cls block
+% 'TUNABLE PARAMETERS'):
+%   \acvSectionTopSkip, \acvSectionContentTopSkip
+%   \acvEntryPreSkip
+%   \acvItemsBeforeListSkip, \acvItemsAfterSkip
+%   \acvItemSep, \acvItemTopSep
+% Example (uncomment & adjust incrementally):
+%   \renewcommand{\acvEntryPreSkip}{-0.6mm}
+%   \renewcommand{\acvItemsAfterSkip}{0mm}
+%   \renewcommand{\acvItemSep}{0.22ex}
+% Directionality: more negative tightens vertical gaps; larger positive loosens.
+% Keep per change small (|Δ| <= 0.5mm or 0.05ex) to avoid layout instability.
+% ----------------------------------------------------------------------------
 \documentclass[11pt, a4paper]{russell}
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=0.8cm, footskip=.5cm}
 \fontdir[fonts/]
@@ -24,8 +40,7 @@
         {2020 - 2025} % Date(s)
         {
           \begin{cvitems}
-            \item {Colonel Hugh Heasley Engineering Scholarship}
-            \item {President's Scholarship of Distinction}
+            \item {Colonel Hugh Heasley Engineering Scholarship \textbar{} President's Scholarship of Distinction}
             \item {\textbf{Key Courses:} Human Factors, Biomechanics, Neuroscience, Rehab Engineering, User Experience, Medical Imaging}
           \end{cvitems}
         }

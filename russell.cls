@@ -371,9 +371,30 @@
 
 
 %-------------------------------------------------------------------------------
-%                Commands for extra
+%  TUNABLE PARAMETERS (SAFE EDIT AREA)
 %-------------------------------------------------------------------------------
-%% Define helper macros a user can change easily
+% This block centralizes user/agent-adjustable knobs. Prefer overriding
+% these in main.tex with \renewcommand rather than editing deeper logic.
+% Spacing semantics:
+%  * Section spacing:     acvSectionTopSkip, acvSectionContentTopSkip
+%  * Entry block spacing: acvEntryPreSkip
+%  * Bullet list spacing: acvItemsBeforeListSkip (before list),
+%                          acvItemsAfterSkip (after list),
+%                          acvItemSep (between items),
+%                          acvItemTopSep (list wrapper pad)
+%  * Header micro spacing: acvHeaderAfter* macros
+% Guidelines for future AI agents:
+%  - Avoid hard-coding new \vspace values inside environments; instead
+%    adjust or introduce a macro here.
+%  - When adding a new spacing concern, document purpose + directionality
+%    (e.g. "negative tightens", "positive expands").
+%  - Keep values small (|Δ| <= 0.5mm) per iteration to prevent layout break.
+%  - Never remove a macro—deprecate by wrapping in a comment and adding a
+%    replacement to preserve backward compatibility.
+%  - Do not inline manual spacing in main.tex; rely on overrides there.
+%  - Maintain this comment block so future tooling can parse knobs.
+%-------------------------------------------------------------------------------
+% Header-related spacers
 % Header
 \newcommand{\acvHeaderNameDelim}{\space}
 \newcommand{\acvHeaderAfterNameSkip}{.4mm}
@@ -385,8 +406,20 @@
 \newcommand{\acvHeaderAfterQuoteSkip}{5mm}
 
 % Others
-\newcommand{\acvSectionTopSkip}{0mm}
-\newcommand{\acvSectionContentTopSkip}{2.5mm}
+% Vertical spacing before a section heading
+% (tunable by user in main.tex if desired)
+% Reduced to tighten layout but keep readability
+\newcommand{\acvSectionTopSkip}{-2mm}
+% Vertical spacing before content environments (cventries, etc.)
+\newcommand{\acvSectionContentTopSkip}{-1mm}
+
+% ------------------------------------------------------------------
+% Entry / list micro spacing controls
+\newcommand{\acvEntryPreSkip}{-0.8mm}          % negative pulls entries closer
+\newcommand{\acvItemsBeforeListSkip}{-3.9mm}    % before first bullet (more negative = tighter)
+\newcommand{\acvItemsAfterSkip}{-0.3mm}         % after bullet list (negative = tighter)
+\newcommand{\acvItemSep}{0.18ex}                % space between bullet items
+\newcommand{\acvItemTopSep}{0.08ex}             % list top/bottom internal padding
 
 
 %-------------------------------------------------------------------------------
@@ -588,10 +621,18 @@
 % Define a section for CV
 % Usage: \cvsection{<section-title>}
 \newcommand{\cvsection}[1]{%
-  \vspace{\acvSectionTopSkip}
-  \sectionstyle{#1}
+  % Section-specific leading adjustment:
+  % Projects / Skills: slight extra to visually separate dense blocks.
+  % Education: a bit more space requested for readability.
+  \ifthenelse{\equal{#1}{Projects} \OR \equal{#1}{Skills}}{\vspace{1.5mm}}{}%
+  % Work Experience: user requested slightly more space above this heading.
+  \ifthenelse{\equal{#1}{Work Experience}}{\vspace{1.0mm}}{}%
+  % Education heading had too much extra; reduce from 2.5mm to 1.5mm
+  \ifthenelse{\equal{#1}{Education}}{\vspace{1.5mm}}{}%
+  \vspace{\acvSectionTopSkip}% base skip (can be negative or zero)
+  \sectionstyle{#1}%
   \phantomsection
-  \color{sectiondivider}\vhrulefill{0.9pt}
+  \color{sectiondivider}\vhrulefill{0.9pt}%
 }
 
 % Define a subsection for CV
@@ -615,23 +656,24 @@
 
 % Define an environment for cventry
 \newenvironment{cventries}{%
-  \vspace{\acvSectionContentTopSkip}
-  \begin{center}
+  \vspace{\acvSectionContentTopSkip}%
+  \begin{center}%
 }{%
-  \end{center}
+  \end{center}%
 }
 % Define an entry of cv information
 % Usage: \cventry{<position>}{<title>}{<location>}{<date>}{<description>}
 \newcommand*{\cventry}[5]{%
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \ifempty{#2#3}
-    {\entrytitlestyle{#1} & \entrydatestyle{#4} \\}
+  % Entry leading spacing (macro-driven)
+  \vspace{\acvEntryPreSkip}%
+  \setlength\tabcolsep{0pt}%
+  \setlength{\extrarowheight}{0pt}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
+    \ifempty{#2#3}%
+      {\entrytitlestyle{#1} & \entrydatestyle{#4} \\}%
       {\entrytitlestyle{#2} & \entrylocationstyle{#3} \\
-      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}
+      \entrypositionstyle{#1} & \entrydatestyle{#4} \\}%
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#5}}%
   \end{tabular*}%
 }
 
@@ -679,15 +721,15 @@
 
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
-  \vspace{\acvSectionContentTopSkip}
-  \vspace{-2.0mm}
-  \begin{center}
-    \setlength\tabcolsep{1ex}
-    \setlength{\extrarowheight}{0pt}
-    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}
+  \vspace{\acvSectionContentTopSkip}%
+  \vspace{-1.0mm}% was -2.0mm
+  \begin{center}%
+    \setlength\tabcolsep{1ex}%
+    \setlength{\extrarowheight}{0pt}%
+    \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} r L{\textwidth * \real{0.9}}}%
 }{%
-    \end{tabular*}
-  \end{center}
+    \end{tabular*}%
+  \end{center}%
 }
 % Define a line of cv information(skill)
 % Usage: \cvskill{<type>}{<skillset>}
@@ -697,15 +739,17 @@
 
 % Define an environment for cvitems(for cventry)
 \newenvironment{cvitems}{%
-  \vspace{-4.0mm}
-  \begin{justify}
-  \begin{itemize}[leftmargin=2ex, nosep, noitemsep]
-    \setlength{\parskip}{0pt}
-    \renewcommand{\labelitemi}{\bullet}
+  % Start list closer to preceding line (role/company) using macro.
+  \vspace{\acvItemsBeforeListSkip}%
+  \begin{justify}%
+  \begin{itemize}[leftmargin=2ex,itemsep=\acvItemSep,topsep=\acvItemTopSep,parsep=0pt]
+    \setlength{\parskip}{0pt}%
+    \renewcommand{\labelitemi}{\bullet}%
 }{%
-  \end{itemize}
-  \end{justify}
-  \vspace{-4.0mm}
+  \end{itemize}%
+  \end{justify}%
+  % Space after list before next entry
+  \vspace{\acvItemsAfterSkip}%
 }
 
 
@@ -764,12 +808,12 @@
 % Define a compact project entry (no category or location)
 % Usage: \cvproject{<title>}{<date>}{<description>}
 \newcommand*{\cvproject}[3]{%
-  \vspace{-2.0mm}
-  \setlength\tabcolsep{0pt}
-  \setlength{\extrarowheight}{0pt}
-  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}
-    \entrytitlestyle{#1} & \entrydatestyle{#2} \\
-    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}
+  \vspace{-1.0mm}% was -2.0mm
+  \setlength\tabcolsep{0pt}%
+  \setlength{\extrarowheight}{0pt}%
+  \begin{tabular*}{\textwidth}{@{\extracolsep{\fill}} L{\textwidth - 4.5cm} R{4.5cm}}%
+    \entrytitlestyle{#1} & \entrydatestyle{#2} \\%
+    \multicolumn{2}{L{\textwidth}}{\descriptionstyle{#3}}%
   \end{tabular*}%
 }
 
