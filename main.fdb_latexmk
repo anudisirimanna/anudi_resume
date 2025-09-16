@@ -1,5 +1,5 @@
 # Fdb version 4
-["lualatex"] 1758039413.1906 "c:/Users/anudi/OneDrive/Documents/anudi_resume/main.tex" "main.pdf" "main" 1758039425.37858 0
+["lualatex"] 1758040816.16799 "c:/Users/anudi/OneDrive/Documents/anudi_resume/main.tex" "main.pdf" "main" 1758040828.52272 0
   "C:/Users/anudi/AppData/Local/MiKTeX/fonts/map/pdftex/pdftex.map" 1757112362 418790 18b99a1a3809ade41a993816ee11fea0 ""
   "C:/Users/anudi/AppData/Local/MiKTeX/luatex-cache/generic/fonts/otl/fontawesome5brands-regular-400.luc" 1757112129 180125 5a9924d423c3f52d8a020b847b16432e ""
   "C:/Users/anudi/AppData/Local/MiKTeX/luatex-cache/generic/fonts/otl/fontawesome5free-solid-900.luc" 1757112129 380950 1515bf73b41067e10929632c36a1bbc9 ""
@@ -264,9 +264,9 @@
   "C:/Users/anudi/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/luaotfload-unicode.lua" 1740607740 7918 4272855a25780b80472f3b58edd95e33 ""
   "C:/Users/anudi/AppData/Local/Programs/MiKTeX/tex/luatex/luaotfload/luaotfload.lua" 1740607740 13566 16df94dd2de231b2bca0aaa0190941fe ""
   "C:/Users/anudi/AppData/Local/Programs/MiKTeX/tex/luatex/luatexbase/luatexbase.sty" 1443949118 10170 b1a2248f43cab899e3fe36f676176865 ""
-  "c:/Users/anudi/OneDrive/Documents/anudi_resume/main.tex" 1758039387 7766 6815fd6db306b708b4ebfe5469361411 ""
-  "main.aux" 1758039423 193 8d56678c9eebcd2de55b051047dd0510 "lualatex"
-  "main.tex" 1758039387 7766 6815fd6db306b708b4ebfe5469361411 ""
+  "c:/Users/anudi/OneDrive/Documents/anudi_resume/main.tex" 1758040782 7773 78a22c71cf97666d515b72d2a9777749 ""
+  "main.aux" 1758040826 193 8d56678c9eebcd2de55b051047dd0510 "lualatex"
+  "main.tex" 1758040782 7773 78a22c71cf97666d515b72d2a9777749 ""
   "russell.cls" 1757824314 32473 da3309b65ee90231e02277265c3827da ""
   (generated)
   "main.aux"
