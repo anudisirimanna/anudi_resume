@@ -1,6 +1,6 @@
 # Fdb version 4
-["lualatex"] 1758691153.85677 "/Users/brark/Code/anudi_resume/main.tex" "main.pdf" "main" 1758691156.12337 0
-  "/Users/brark/Code/anudi_resume/main.tex" 1758691141.88709 7605 6815fd6db306b708b4ebfe5469361411 ""
+["lualatex"] 1758691270.7146 "/Users/brark/Code/anudi_resume/main.tex" "main.pdf" "main" 1758691272.78883 0
+  "/Users/brark/Code/anudi_resume/main.tex" 1758691268.28458 6993 d74b0a8fd9068434bbcd83123c67b89b ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/map/pdftex/updmap/pdftex.map" 1741388039 5466553 2748998d7db8078826afa1f272036265 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-Bold.otf" 1741388039 298076 b23705a4082d8c84d2533a37e9fb0811 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-dist/fonts/opentype/adobe/sourcesanspro/SourceSansPro-Light.otf" 1741388039 290464 420d839a0ccfb6a040d3a5c6af03c5aa ""
@@ -267,8 +267,8 @@
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/luatex-cache/generic/fonts/otl/sourcesanspro-semiboldit.luc" 1744258154.83414 439948 eacccdb2acb174a4df6e92b5e163d69a ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/luatex-cache/generic/names/luaotfload-names.luc.gz" 1744258147.15975 402915 91622015a42b4af34803bded4105e1d3 ""
   "/opt/homebrew/Cellar/texlive/20250308_1/share/texmf-var/web2c/luahbtex/lualatex.fmt" 1741388039 5583313 89d02a350aee6b719ab348ea7a5f17fa ""
-  "main.aux" 1758691155.83856 193 8d56678c9eebcd2de55b051047dd0510 "lualatex"
-  "main.tex" 1758691141.88709 7605 6815fd6db306b708b4ebfe5469361411 ""
+  "main.aux" 1758691272.59507 193 8d56678c9eebcd2de55b051047dd0510 "lualatex"
+  "main.tex" 1758691268.28458 6993 d74b0a8fd9068434bbcd83123c67b89b ""
   "russell.cls" 1757715047.50855 31652 da3309b65ee90231e02277265c3827da ""
   (generated)
   "main.aux"

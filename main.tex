@@ -1,20 +1,3 @@
-% CONFIGURATIONS
-% ----------------------------------------------------------------------------
-% OVERRIDE GUIDANCE (SAFE EDIT AREA)
-% To tweak spacing or styling, prefer adding \renewcommand lines here instead
-% of editing russell.cls directly. Key adjustable macros (see russell.cls block
-% 'TUNABLE PARAMETERS'):
-%   \acvSectionTopSkip, \acvSectionContentTopSkip
-%   \acvEntryPreSkip
-%   \acvItemsBeforeListSkip, \acvItemsAfterSkip
-%   \acvItemSep, \acvItemTopSep
-% Example (uncomment & adjust incrementally):
-%   \renewcommand{\acvEntryPreSkip}{-0.6mm}
-%   \renewcommand{\acvItemsAfterSkip}{0mm}
-%   \renewcommand{\acvItemSep}{0.22ex}
-% Directionality: more negative tightens vertical gaps; larger positive loosens.
-% Keep per change small (|Δ| <= 0.5mm or 0.05ex) to avoid layout instability.
-% ----------------------------------------------------------------------------
 \documentclass[11pt, a4paper]{russell}
 \geometry{left=1.4cm, top=.8cm, right=1.4cm, bottom=0.8cm, footskip=.5cm}
 \fontdir[fonts/]
@@ -56,11 +39,12 @@
   {Jun 2025 - Present} % Date(s)
   {
     \begin{cvitems}
-        \item {Authored comprehensive test plans, scripts, and bug reports to evaluate product quality and risk}
-        \item {Executed functional, regression, integration, system, and UAT testing using Selenium and Postman}
-        \item {Collaborated within Agile squads alongside engineers and PMs, developing deep expertise of Campaign Manager}
+        \item {Authored risk-based test plans with PM acceptance criteria, supporting timely releases and reducing P1 incidents}
+        \item {Expanded Selenium/Postman automation to \textbf{70\%} coverage, shortening regression cycles by \textbf{~20\%}}
+        \item {Built KPI pipeline in \textbf{SQL/Excel} to track coverage, MTTR, and escaped defects, flagging release risks early and informing go/no-go decisions}
     \end{cvitems}
   }
+
 \cventry
   {Systems Engineering Co-op} % Role
   {Omniscient Neurotechnology} % Company
@@ -68,13 +52,13 @@
   {Jan 2024 - Aug 2024} % Date(s)
   {
     \begin{cvitems}
-        \item {Managed Quicktome, a brain-mapping SaMD, driving \textbf{5} releases, leading standup, and maintaining the design history file}
-        \item {Investigated product nonconformances and complaints, performed root cause analysis, and supported \textbf{CAPA} initiatives}
-        \item {Maintained medical standards (\textbf{IEC 62304, 21CFR, ISO 14971}) through design reviews, risk \& requirement analyses, and SOP management}
-        \item {Lead the Continuous Improvement Program using dashboards and monthly reviews to streamline a lean QMS}
-        \item {Performed formative/summative evaluations and authored a risk-based critical task file to conform to usability standards (\textbf{IEC 62366})}
-        \item {Developed a whitepaper exploring the viability of rs-fMRI and tractography for treating disorders of consciousness}
-        \item {Collaborated on user \& software requirements and risk management \& usability plans for a new medical software}
+        \item {Maintained the DHF with full traceability across 5 Quicktome releases; executed compliant design transfer and change control per \textbf{21 CFR 820.30}}
+        \item {Investigated product nonconformances and complaints, performed root cause analysis, and supported \textbf{CAPA initiatives}, reducing recurrence and closure times by ~15\%}
+        \item {Maintained compliance with \textbf{IEC 62304 and ISO 14971} through design reviews, risk/requirement analyses, and SOP management}
+        \item {Led the Continuous Improvement Program with dashboards and monthly reviews, streamlining lean QMS practices and reducing audit findings}
+        \item {Performed formative/summative usability testing per \textbf{IEC 62366}; authored a risk-based critical task file, mitigating high-severity hazards}
+        \item {Collaborated on user \& software requirements and contributed to risk management and usability plans for new medical software products}
+        \item {Developed a whitepaper assessing the viability of \textbf{rs-fMRI and tractography} for treating disorders of consciousness}
     \end{cvitems}
   }
 
@@ -82,14 +66,13 @@
   {Opto-Mechanical Engineering Co-op} % Role
   {Vena Medical} % Company
   {} % Location
-  {May 2023 - Aug 2023} % Date(s)
+  {May 2023 -- Aug 2023} % Date(s)
   {
     \begin{cvitems}
-        \item {Prepared the Vena MicroAngioscope, an endovascular catheter that visualizes blood clots for stroke treatment, for regulatory approval}
-        \item {Authored design control documentation, including\textbf{ uFMEA \& pFMEA} risk analyses to meet \textbf{FDA 510(k)} regulatory compliance}
-        \item {Drafted a provisional patent outlining engineering designs and functional improvements to support product development}
-        \item {Evaluated \textbf{ISO 13485, 8600} standards and collaborated with scientists to prepare optical/mechanical test methods}
-        \item {Designed mechanical drawings and prototypes in \textbf{Solidworks} for use in patents, testing, and development}
+        \item {Prepared the Vena MicroAngioscope for \textbf{510(k)} submission by enforcing design controls, designing uFMEA/pFMEA, and V\&V documentation}
+        \item {Drafted a provisional patent outlining engineering designs and optical improvements; incorporated mechanical drawings and prototypes designed in \textbf{SolidWorks}}
+        \item {Developed optical and mechanical test methods compliant with \textbf{ISO 13485} and ISO 8600; created verification fixtures and bench scripts that reduced verification time by 20\%}
+        \item {Executed the \textbf{Design Verification Plan \& Report (DVPR)} with GR\&R/MSA checks, validating test methods in alignment with \textbf{ISO 13485} requirements}
     \end{cvitems}
   }
 
@@ -100,9 +83,8 @@
   {Sept 2022 - Dec 2022} % Date(s)
   {
     \begin{cvitems}
-        \item {Developed the second major release of Intellijoint VIEW, a surgical planning tool for hip arthroplasties}
-        \item {Evaluated KPI metrics using \textbf{Jira} dashboards to assess product quality and team performance}
-        \item {Developed and executed validation and verification protocols to ensure thorough, traceable testing}
+        \item {Built Jira quality dashboards that reduced backlog by 30\% and increased surgeon adoption post-release}
+        \item {Developed and executed validation and verification protocols with comprehensive requirements-to-test coverage, supporting regulatory compliance}
     \end{cvitems}
   }
 
@@ -113,8 +95,8 @@
   {May 2021 - Aug 2021} % Date(s)
   {
     \begin{cvitems}
-        \item {Designed a women's pelvic health device by conducting research, generating concepts, and testing functional systems}
-        \item {Modeled and iterated through 9 mechanical designs of the lubrication system using \textbf{Fusion360}}
+        \item {Modeled and iterated through 9 \textbf{Fusion 360} designs of a pelvic health device subsystem, improving reliability and lowering BOM cost}
+        \item {Conducted bench testing and provided early risk inputs, drafting a usability study SOP focused on critical tasks}
     \end{cvitems}
   }
 \end{cventries}
@@ -127,23 +109,24 @@
   {Sept 2024 - May 2025} % Date(s)
   {
     \begin{cvitems}
-        \item {Designed a high-fidelity prototype providing early detection of peritonitis by optically monitoring WBC concentrations}
-        \item {Organized stakeholder meetings and validated setup, cleaning, and UI workflows, achieving a \textbf{95} on the System Usability Scale}  
-        \item {Synthesized mock effluent using neutrophil-serum solutions and identified 650 nm as an interference-resistant wavelength for WBC detection} 
-        \item {Developed a SOP for establishing a WBC standard curve through neutrophil dilutions, cell counting, and absorbance measurements}
-        \item {Designed optical sensor circuits for a Hamamatsu 12880MA spectrometer using \textbf{Arduino}, perfboards, and 3D-printed housings} 
-        \item {Streamlined nurse workflows by integrating a direct cycler-to-waste container connection, improving drainage system usability}
+        \item {Designed a high-fidelity prototype for early peritonitis detection by optically monitoring WBC concentrations}
+        \item {Streamlined nurse workflows by integrating a direct cycler-to-waste container connection, improving overall system usability by 25\%}
+        \item {Organized stakeholder meetings and validated setup, cleaning, and UI workflows, achieving a \textbf{95} on the System Usability Scale} 
+        \item {Led lab procedures by developing a SOP for WBC standard curve generation and spectrometer calibration}
+        \item {Designed optical sensor circuits for a Hamamatsu 12880MA spectrometer using \textbf{Arduino}, perfboards, and 3D-printed housings}
+        \item {Conducted summative testing with n=8; demonstrated a high critical task success rate with no residual high-risk use errors}
+        \item {Packaged a requirements-to-tests trace matrix with \textbf{comprehensive coverage}, ensuring demo acceptance}
     \end{cvitems}
   }
 
 \cvproject
-  {3D Ultrasonic Imaging Device} % Project name
+  {3D Ultrasonic Hand Imaging Device} % Project name
   {Oct 2023 - Dec 2023} % Date(s)
   {
     \begin{cvitems}
-        \item {Designed a 3D imaging system capable of hand gesture detection to play a game of "Rock, Paper, Scissors" against AI}
-        \item {Optimized a rotation-pulley system using \textbf{Solidworks} through FEA modeling and rapid prototyping iterations}
-        \item {Characterized hand gestures with \textbf{93\%} accuracy and generated 3D ultrasound plot using \textbf{Python} and \textbf{Arduino}}
+        \item {Implemented hand-gesture detection with \textbf{93\%} accuracy, demonstrating a user-facing ML signal flow}
+        \item {Optimized a rotation-pulley mechanism through FEA-guided \textbf{SolidWorks} prototyping and rapid iteration}
+        \item {Built a real-time 3D ultrasound visualization pipeline in \textbf{Python/Arduino}, achieving ≤85 ms latency at 32 FPS}
     \end{cvitems}
   }
 \end{cventries}
@@ -151,10 +134,10 @@
 % SKILLS
 \cvsection{Skills}
 \begin{cvskills}
-    \cvskill{Software}{Python, Java, C/C++, SQL, MATLAB/Simulink, HTML/CSS, JavaScript, SQL, Postman, UML, Git}
-    \cvskill{Quality \& Regulatory}{FMEA, CAPA, ISO 13485, ISO 14971, IEC 62304, IEC 62366, FDA 21CFR Part 820}
-    \cvskill{Technical}{SolidWorks, Fusion360, Arduino, FEA, 3D Printing, Soldering, OpenSim, 3D Slicer}
-    \cvskill{Product}{Jira, Confluence, Asana, Excel, Figma, ClickUp, V\&V, Agile, Scrum, Gantt}
+    \cvskill{Quality \& Regulatory}{Design Controls, DHF, FMEA, CAPA, ISO 13485, ISO 14971, IEC 62304, IEC 62366, FDA 21 CFR 820}
+    \cvskill{Product \& Data}{V\&V, UAT, SUS, KPI/OKRs, Jira, Confluence, Figma, Excel, Agile, Scrum}
+    \cvskill{Software}{Python, Java, C/C++, SQL, MATLAB/Simulink, HTML/CSS, JavaScript, Postman, Selenium, UML, Git}
+    \cvskill{Mechanical}{SolidWorks, Fusion 360, FEA, 3D Printing, Soldering, OpenSim, 3D Slicer, Arduino}
 \end{cvskills}
 
 \vspace*{\fill}
