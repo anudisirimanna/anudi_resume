@@ -421,6 +421,11 @@
 \newcommand{\acvItemSep}{0.18ex}                % space between bullet items
 \newcommand{\acvItemTopSep}{0.08ex}             % list top/bottom internal padding
 
+% Section-specific content spacers
+% Skills: additional adjustment under the Skills header before its content.
+% Negative tightens; positive expands. Default gently loosens vs legacy (-1.0mm)
+\newcommand{\acvSkillsAdditionalTopSkip}{-0.1mm}
+
 
 %-------------------------------------------------------------------------------
 %                Commands for utilities
@@ -722,7 +727,7 @@
 % Define an environment for cvskill
 \newenvironment{cvskills}{%
   \vspace{\acvSectionContentTopSkip}%
-  \vspace{-1.0mm}% was -2.0mm
+  \vspace{\acvSkillsAdditionalTopSkip}% replaces hard-coded -1.0mm
   \begin{center}%
     \setlength\tabcolsep{1ex}%
     \setlength{\extrarowheight}{0pt}%
